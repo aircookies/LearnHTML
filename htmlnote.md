@@ -173,7 +173,7 @@ HTML中的注释以`<!--`开头,以`-->`结束.
 | &deg; | 摄氏度 | `deg;` |
 | &plusmn; | 正负号 | `&plusmn;` |
 | &times; | 乘号 | `&times;` |
-| &divide; | 除号 | `&divide;`
+| &divide; | 除号 | `&divide;` |
 | &sup2; | 平方 | `&sup2;` |
 | &sup3; | 立方 | `&sup3;` |
 
@@ -347,14 +347,14 @@ dl是describe list(描述列表)的缩写.
 
 **表单域**是一个**包含表单元素的区域**.
 
-在HTML标签中,`<from>`标签用于定义表单域,以实现用户信息的收集和传递.
+在HTML标签中,`<form>`标签用于定义表单域,以实现用户信息的收集和传递.
 
-**`<from>`**会把它范围内的表单元素交给服务器.
+**`<form>`**会把它范围内的表单元素交给服务器.
 
 ```   html
-<from action="url地址 method="提交方式" name="表单域名称">
+<form action="url地址 method="提交方式" name="表单域名称">
    各种表单元素控件
-</from>
+</form>
 ```
 
 常用属性
@@ -366,7 +366,7 @@ dl是describe list(描述列表)的缩写.
 | name | 名称 | 用于指定表单域的名称,以区分同一个页面中的多个表单域. |
 
 1. 在写表单元素之前,应该有个表单域把他们进行包含.
-2. 表单域是from标签.
+2. 表单域是form标签.
 
 ##### 表单元素
 
@@ -448,3 +448,36 @@ dl是describe list(描述列表)的缩写.
 如何让input表单元素展现不同的形态?比如单选按钮或者文本框.
 
 答:type属性,type属性可以让input表单元素设置不同的形态.
+
+###### `<lable>`标签
+
+`<label>`标签为input元素定义标注(标签).
+
+`<label>`标签用于绑定一个表单元素,当点击`<label>`标签内的文本时,浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上,用来增加用户体验.
+
+**语法:**
+
+``` html
+<label for="sex">男</label>
+<input type="radio" name="sex" id="sex" />
+```
+
+核心:`<label>`标签的for属性应当与相关元素的id属性相同.
+
+###### `<select>`表单元素
+
+使用场景:在页面中,如果有多个选项让用户选择,并且想要节省页面空间时,我们可以使用`<select>`标签控件定义**下拉列表.**
+
+**语法:**
+
+``` html
+<select>
+   <option>选项1</option>
+   <option>选项2</option>
+   <option>选项3</option>
+   ...
+</select>
+```
+
+1. `<select>`中至少包含一对`<option>`.
+2. 在`<option>`定义select="selected"时,当前项即为默认选中项.
