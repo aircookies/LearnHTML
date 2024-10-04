@@ -1,4 +1,4 @@
-# HTML5学习笔记:book:
+# HTML5学习笔记
 
 ## 第一个 HTML
 
